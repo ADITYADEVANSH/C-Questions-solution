@@ -39,8 +39,8 @@ vector<int> CountSort( int arr[] , int n)
      
      for(int i=0 ; i<n ; i++)        //PAHELE yaha ERROR thi because I used 'position[ arr[i]]-1' instead of '--position[ arr[i]]'
      {
-         sol[ --position[ arr[i]]  ] = arr[i]; 
-     }
+         sol[ --position[ arr[i]]  ] = arr[i]; //  /* Yha mai add karte time sidha loop chala raha hu aur sorted array aa raha hai, par ye tareeka sorting stablity ko comprise 
+     }                                         // kar deta hai agar sorting stablity comprimise nahi karni to last se loop chalao question array mai aur uske refrence se karo kaam. */
      
      return sol;
 }
